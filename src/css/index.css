@@ -1,0 +1,113 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #293264;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1C1C1C;
+}
+
+.App {
+  width: 550px;
+  height: 550px;
+  background-color: #F5F7FB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-image: url("../img/top-right-blob.png"), url("../img/bottom-left-blob.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, bottom left;
+}
+.App .StartPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 70px;
+}
+.App .StartPage h1 {
+  font-family: "Karla", sans-serif;
+}
+.App .StartPage span {
+  margin-bottom: 30px;
+}
+.App .StartPage button {
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+  color: #F5F7FB;
+  background-color: #4D5B9E;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+.App .GamePage {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 60px;
+  text-align: left;
+}
+.App .GamePage .Question {
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.App .GamePage .Question h5 {
+  margin: 0;
+}
+.App .GamePage .Question .answers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+.App .GamePage .Question .answers .Answer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 0.8px solid #4D5B9E;
+  border-radius: 8px;
+  padding: 3px 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  margin: 0 5px;
+  min-width: 100px;
+  font-size: 0.65rem;
+  justify-content: center;
+}
+.App .GamePage .Question hr {
+  width: 100%;
+  border: 0.8px solid #D6DBF5;
+}
+.App .GamePage button {
+  width: 160px;
+  height: 40px;
+  border-radius: 15px;
+  color: #F5F7FB;
+  background-color: #4D5B9E;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 0.75rem;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  margin: auto;
+}
