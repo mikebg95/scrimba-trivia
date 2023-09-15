@@ -1,6 +1,6 @@
 import StartPage from "./components/StartPage";
 import GamePage from "./components/GamePage";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [started, setStarted] = useState(false)

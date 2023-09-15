@@ -9,15 +9,14 @@ const GamePage = () => {
     const [checked, setChecked] = useState(false)
 
     function checkAnswers() {
-        let corrects = questions.map(question => question.correct)
         setChecked(true)
     }
 
     // fetch from api and save in state as custom question objects
     useEffect(() => {
-        fetch(DATA_URL).
-            then(res => res.json()).
-            then(data => {
+        fetch(DATA_URL)
+            .then(res => res.json())
+            .then(data => {
                 const mappedQuestions = data.results.map((questionData, index) => {
                     const { question, correct_answer: correctAnswer, incorrect_answers: incorrectAnswers } = questionData;
                     const shuffledAnswers = [...incorrectAnswers, correctAnswer]
@@ -54,7 +53,7 @@ const GamePage = () => {
             />
         ));
         setQuestionElements(tempElements);
-    }, [questions]);
+    }, [questions, checked]);
 
     return (
         <div className="GamePage">
